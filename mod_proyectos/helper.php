@@ -2,7 +2,8 @@
 defined('_JEXEC') or die('Acceso restringido<br />Buen intento!');
 function mostrarMensaje($mensaje)
 {
-	echo "Bienvenido este es su mensaje impreso adentro de una funcion: ".$mensaje;
+	
+	echo "Bienvenido =): ".$mensaje;
 }
 
 
