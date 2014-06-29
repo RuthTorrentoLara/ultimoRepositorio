@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<extension
+    type="module"
+    version="3.2"
+    client="site"
+	method="upgrade">
+    <name>Controlador de Proyectos</name>
+    <creationDate>5/06/2014</creationDate>
+    <author>Grupo14_HDP</author>
+    <version>3.2</version>
+    <description>Modulo controlador de proyectos</description>
+    <files><!--Se usa para decirle a joomla que archivos son los que vamos a necesitar e ignorar los demas que pudieron haber sido inflitrados por un atacante-->
+        <filename module="mod_proyectos">mod_proyectos.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>fpdf</folder>
+                <folder>dompdf</folder>
+		<filename>mysql/uninstall.mysql.utf8.sql</filename>
+        <filename>mysql/install.mysql.utf8.sql</filename>
+        <filename>tmpl/index.html</filename>
+		<filename>mod_proyectos.xml</filename>
+    </files>
+	<install><!--Le decimos el script a ocupar cuando instala el plugin aqui se define las tablas a usar-->
+		<sql><file driver="mysql" charset="utf8">mysql/install.mysql.utf8.sql</file></sql>
+	</install>
+ 
+	<uninstall><!--Le decimos el script a ocupar cuando desinstala el plugin **Cuidado con este, ya que podemos eliminar tablas importantes**-->
+		 <sql><file driver="mysql" charset="utf8">mysql/uninstall.mysql.utf8.sql</file></sql>
+	</uninstall>
+    <config><!--configuracion en el back-end esta es la pestaña que dice avanzado cuando agregas el plugin-->
+        
+		<fields name="params">
+		
+			<fieldset name="basic">
+				<field name="textBV" type="textarea" label="Un mensaje de bienvenida" description="Un mensaje de bienvenida mostrado al principio del modulo" cols="30" rows="5"/>
+				<field name="textDesp" type="textarea" label="Un mensaje de despedida" description="Un mensaje de despedida mostrado al final del modulo" cols="30" rows="5"/>
+			</fieldset>
+		
+		
+            <fieldset
+                name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                <field
+                    name="owncache"
+                    type="list"
+                    default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                        value="1">JGLOBAL_USE_GLOBAL
+                    </option>
+                    <option
+                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING
+                    </option>
+                </field>
+            </fieldset>                   
+        </fields>
+    </config>
+</extension>
+ 
