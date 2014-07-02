@@ -1,12 +1,13 @@
 <?php 
 defined('_JEXEC') or die('Acceso restringido<br />Buen intento!');
 function mostrarMensaje($mensaje)
+
+
+
 {
-	
+
 	echo "Bienvenido =): ".$mensaje;
 }
-
-
 
 class GestorDB{
 	
