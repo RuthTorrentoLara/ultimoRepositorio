@@ -2,8 +2,10 @@
  
 defined('_JEXEC') or die('Acceso restringido'); 
 require_once ('helper.php');
+//controlador de ventanas
+$bandera=$_POST['dir'];
 
-$bandera=$_POST['dir'];//controlador de ventanas
+
 $params->def('greeting', 1);
 $layout= $params->get('layout', 'default');
 
