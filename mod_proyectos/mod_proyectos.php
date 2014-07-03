@@ -41,7 +41,7 @@ if($bandera==1)
 	$layout .= '_uno';
 }
 if($bandera==2)
-	// esto es un comenterio :D
+	// esto es un comenterio :D de prueba
 {
 	$layout .= '_dos';
 }
