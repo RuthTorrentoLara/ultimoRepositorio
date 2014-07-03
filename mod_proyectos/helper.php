@@ -1,7 +1,7 @@
 <?php 
 defined('_JEXEC') or die('Acceso restringido<br />Buen intento!');
 function mostrarMensaje($mensaje)
-
+//corlos pude hacer un commit, sin q me diera error,creo :D 
 
 
 {
