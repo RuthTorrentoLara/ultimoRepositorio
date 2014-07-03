@@ -4,7 +4,7 @@ defined('_JEXEC') or die('Acceso restringido');
 require_once ('helper.php');
 //controlador de ventanas
 $bandera=$_POST['dir'];
-
+/// pude hacer un commit, sin error, creo :/ 
 
 $params->def('greeting', 1);
 $layout= $params->get('layout', 'default');
